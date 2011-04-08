@@ -1,0 +1,57 @@
+= Guard::Pow
+
+Pow guard allows to automatically & intelligently restart your applications (just by touching tmp/restart.txt)
+
+- Tested on Ruby 1.8.6, 1.8.7 & 1.9.2.
+
+== Install
+
+Please be sure to have {Guard}[http://github.com/guard/guard] installed before continue.
+
+Install the gem:
+
+    gem install guard-pow
+
+Add it to your Gemfile (inside test group):
+
+    gem 'guard-pow'
+
+Add guard definition to your Guardfile with:
+
+    guard init pow
+
+== Usage
+
+Please read {Guard usage doc}[http://github.com/guard/guard#readme]
+
+== Guardfile
+
+Pow guard can be really be adapated to all kind of projects.
+Please read {Guard doc}[http://github.com/guard/guard#readme] for more info about Guardfile DSL.
+
+=== Rails app
+
+    guard 'pow' do
+      watch('.powrc')
+      watch('.powenv')
+      watch('.rvmrc')
+      watch('Gemfile')
+      watch('Gemfile.lock')
+      watch('config/application.rb')
+      watch('config/environment.rb')
+      watch(%r{^config/environments/.*\.rb$})
+      watch(%r{^config/initializers/.*\.rb$})
+    end
+
+
+== Development
+
+- Source hosted at {GitHub}[http://github.com/guard/guard-pow]
+- Report issues/Questions/Feature requests on {GitHub Issues}[http://github.com/guard/guard-pow/issues]
+
+Pull requests are very welcome! Make sure your patches are well tested. Please create a topic branch for every separate change
+you make.
+
+== Authors
+
+{Thibaud Guillaume-Gentil}[http://github.com/thibaudgg]
