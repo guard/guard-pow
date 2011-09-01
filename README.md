@@ -1,4 +1,4 @@
-Guard::Pow ![travis-ci](http://travis-ci.org/guard/guard-pow.png)
+Guard::Pow [![travis-ci](http://travis-ci.org/guard/guard-pow.png)](http://travis-ci.org/guard/guard-pow)
 =============
 
 Pow guard allows to automatically & intelligently restart your applications (just by touching tmp/restart.txt)
