@@ -3,7 +3,7 @@ Guard::Pow ![travis-ci](http://travis-ci.org/guard/guard-pow.png)
 
 Pow guard allows to automatically & intelligently restart your applications (just by touching tmp/restart.txt)
 
-* Tested on Ruby 1.8.6, 1.8.7 & 1.9.2.
+* Tested on Ruby 1.8.7, 1.9.2, ree, rbx & jruby
 
 Install
 -------

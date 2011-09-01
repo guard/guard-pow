@@ -6,13 +6,13 @@ describe Guard::Pow do
   describe '#initialize' do
     it 'should instanciate runner with option' do
       Guard::Pow::Runner.should_receive(:new)
-      Guard::Pow.new [], { :bundler => false }
+      Guard::Pow.new [], { :restart_on_start => true }
     end
   end
 
   describe "start" do
-    it "should restart pow" do
-      subject.runner.should_receive(:restart_pow)
+    it "should not restart pow by default" do
+      subject.runner.should_not_receive(:restart_pow)
       subject.start
     end
   end
