@@ -24,10 +24,10 @@ describe Guard::Pow do
     end
   end
 
-  describe "run_on_change" do
+  describe "run_on_changes" do
     it "should restart pow" do
       subject.runner.should_receive(:restart_pow)
-      subject.run_on_change(["xxx"])
+      subject.run_on_changes(["xxx"])
     end
   end
 

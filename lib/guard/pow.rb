@@ -24,7 +24,7 @@ module Guard
       runner.restart_pow if @options[:restart_on_reload]
     end
 
-    def run_on_change(paths)
+    def run_on_changes(paths)
       runner.restart_pow
     end
 
