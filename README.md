@@ -1,5 +1,4 @@
-Guard::Pow [![travis-ci](http://travis-ci.org/guard/guard-pow.png)](http://travis-ci.org/guard/guard-pow)
-=============
+# Guard::Pow [![Gem Version](https://badge.fury.io/rb/guard-pow.png)](http://badge.fury.io/rb/guard-pow) [![Build Status](https://travis-ci.org/guard/guard-pow.png?branch=master)](http://travis-ci.org/guard/guard-pow) [![Dependency Status](https://gemnasium.com/guard/guard-pow.png)](https://gemnasium.com/guard/guard-pow) [![Code Climate](https://codeclimate.com/github/guard/guard-pow.png)](https://codeclimate.com/github/guard/guard-pow)
 
 Pow guard allows to automatically & intelligently restart your applications (just by touching tmp/restart.txt)
 
