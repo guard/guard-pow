@@ -1,9 +1,15 @@
-source "http://rubygems.org"
+source "https://rubygems.org"
 
 gemspec
 
 gem 'rake'
-gem 'ruby_gntp'
-platforms :ruby do
-  gem 'rb-readline'
+
+group :development do
+  gem 'ruby_gntp'
+  gem 'rb-fsevent'
+  gem 'guard-rspec'
+end
+
+group :test do
+  gem 'rspec'
 end
