@@ -10,7 +10,7 @@ describe Guard::Pow::Runner do
       before(:each) { FileUtils.rm_rf('tmp') }
 
       it "should create tmp/restart.txt" do
-        expect { subject.restart_pow }.should change { File.file?("tmp/restart.txt") }.from(false).to(true)
+        expect { subject.restart_pow }.to change { File.file?("tmp/restart.txt") }.from(false).to(true)
       end
     end
 
@@ -21,7 +21,7 @@ describe Guard::Pow::Runner do
       end
 
       it "should create tmp/restart.txt" do
-        expect { subject.restart_pow }.should change { File.file?("tmp/restart.txt") }.from(false).to(true)
+        expect { subject.restart_pow }.to change { File.file?("tmp/restart.txt") }.from(false).to(true)
       end
     end
 
@@ -33,7 +33,7 @@ describe Guard::Pow::Runner do
       end
 
       it "should touch tmp/restart.txt" do
-        expect { subject.restart_pow }.should change { File.mtime("tmp/restart.txt") }
+        expect { subject.restart_pow }.to change { File.mtime("tmp/restart.txt") }
       end
     end
   end
