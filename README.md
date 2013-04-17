@@ -2,7 +2,7 @@
 
 Pow guard allows to automatically & intelligently restart your applications (just by touching tmp/restart.txt)
 
-* Tested on Ruby 1.8.7, 1.9.2, ree, rbx & jruby
+* Tested on Ruby 1.8.7, 1.9.3, 2.0.0, ree, rbx & jruby
 
 Install
 -------
