@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.email        = "thibaud@thibaud.me"
   s.summary      = 'Guard plugin for Pow'
   s.description  = 'Guard::Pow automatically manage Pow applications restart'
-  s.homepage     = 'http://rubygems.org/gems/guard-pow'
+  s.homepage     = 'https://rubygems.org/gems/guard-pow'
   s.license      = "MIT"
 
   s.files        = `git ls-files`.split($/)

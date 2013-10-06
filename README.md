@@ -1,4 +1,6 @@
-# Guard::Pow [![Gem Version](https://badge.fury.io/rb/guard-pow.png)](http://badge.fury.io/rb/guard-pow) [![Build Status](https://travis-ci.org/guard/guard-pow.png?branch=master)](http://travis-ci.org/guard/guard-pow) [![Dependency Status](https://gemnasium.com/guard/guard-pow.png)](https://gemnasium.com/guard/guard-pow) [![Code Climate](https://codeclimate.com/github/guard/guard-pow.png)](https://codeclimate.com/github/guard/guard-pow)
+# Guard::Pow
+
+[![Gem Version](https://badge.fury.io/rb/guard-pow.png)](http://badge.fury.io/rb/guard-pow) [![Build Status](https://travis-ci.org/guard/guard-pow.png?branch=master)](http://travis-ci.org/guard/guard-pow) [![Dependency Status](https://gemnasium.com/guard/guard-pow.png)](https://gemnasium.com/guard/guard-pow) [![Code Climate](https://codeclimate.com/github/guard/guard-pow.png)](https://codeclimate.com/github/guard/guard-pow)
 
 Pow guard allows to automatically & intelligently restart your applications (just by touching tmp/restart.txt)
 
@@ -11,17 +13,21 @@ Please be sure to have [Guard](https://github.com/guard/guard) installed before 
 
 Install the gem:
 
-    $ gem install guard-pow
+``` bash
+gem install guard-pow
+```
 
 Add it to your Gemfile (inside development group):
 
 ``` ruby
-gem 'guard-pow'
+gem 'guard-pow', require: false
 ```
 
 Add guard definition to your Guardfile by running this command:
 
-    $ guard init pow
+``` bash
+guard init pow
+```
 
 Usage
 -----
