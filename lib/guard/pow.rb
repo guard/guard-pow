@@ -1,35 +1,31 @@
 require 'guard'
-require 'guard/guard'
+require 'guard/plugin'
 
 module Guard
-  class Pow < Guard
+  class Pow < Plugin
+    require 'guard/pow/manager'
 
-    autoload :Runner, 'guard/pow/runner'
-    attr_accessor :runner
+    attr_accessor :manager
 
-    def initialize(watchers = [], options = {})
+    def initialize(options = {})
       super
       @options = {
-        :restart_on_start  => false,
-        :restart_on_reload => true
-      }.update(options)
-      @runner = Runner.new
+        restart_on_start: false,
+        restart_on_reload: true
+      }.merge(options)
+      @manager = Manager.new
     end
 
     def start
-      runner.restart_pow if @options[:restart_on_start]
+      manager.restart if options[:restart_on_start]
     end
 
     def reload
-      runner.restart_pow if @options[:restart_on_reload]
+      manager.restart if options[:restart_on_reload]
     end
 
     def run_on_changes(paths)
-      runner.restart_pow
-    end
-
-    def stop
-      true
+      manager.restart
     end
 
   end

@@ -2,7 +2,7 @@
 
 Pow guard allows to automatically & intelligently restart your applications (just by touching tmp/restart.txt)
 
-* Tested on Ruby 1.8.7, 1.9.3, 2.0.0, ree, rbx & jruby
+* Tested on Ruby 1.9.3, 2.0.0, rbx & jruby
 
 Install
 -------
@@ -32,7 +32,7 @@ Guardfile
 ---------
 
 Pow guard can be really be adapated to all kind of projects.
-Please read [Guard doc](http://github.com/guard/guard#readme) for more info about Guardfile DSL.
+Please read [Guard doc](https://github.com/guard/guard#readme) for more info about Guardfile DSL.
 
 ### Rails app
 
@@ -53,8 +53,8 @@ end
 ### List of available options:
 
 ``` ruby
-:restart_on_start => true   # Restart Pow on Guard start, default: false
-:restart_on_reload => false # Restart Pow on Guard reload, default: true
+restart_on_start: true   # Restart Pow on Guard start, default: false
+restart_on_reload: false # Restart Pow on Guard reload, default: true
 ```
 
 Development

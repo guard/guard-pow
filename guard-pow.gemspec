@@ -1,26 +1,24 @@
-# -*- encoding: utf-8 -*-
-$:.push File.expand_path('../lib', __FILE__)
+# coding: utf-8
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'guard/pow/version'
 
 Gem::Specification.new do |s|
-  s.name        = 'guard-pow'
-  s.version     = Guard::PowVersion::VERSION
-  s.platform    = Gem::Platform::RUBY
-  s.authors     = ['Thibaud Guillaume-Gentil']
-  s.email       = ['thibaud@thibaud.me']
-  s.homepage    = 'http://rubygems.org/gems/guard-pow'
-  s.summary     = 'Guard gem for Pow'
-  s.description = 'Guard::Pow automatically manage Pow applications restart'
+  s.name         = "guard-pow"
+  s.version      = Guard::PowVersion::VERSION
+  s.author       = "Thibaud Guillaume-Gentil"
+  s.email        = "thibaud@thibaud.me"
+  s.summary      = 'Guard plugin for Pow'
+  s.description  = 'Guard::Pow automatically manage Pow applications restart'
+  s.homepage     = 'http://rubygems.org/gems/guard-pow'
+  s.license      = "MIT"
 
-  s.required_rubygems_version = '>= 1.3.6'
-  s.rubyforge_project         = 'guard-pow'
-
-  s.add_dependency 'guard',   '>= 1.1'
-
-  s.add_development_dependency 'bundler'
-  s.add_development_dependency 'rspec'
-  s.add_development_dependency 'guard-rspec'
-
-  s.files        = Dir.glob('{lib}/**/*') + %w[LICENSE README.md]
+  s.files        = `git ls-files`.split($/)
+  s.test_files   = s.files.grep(%r{^spec/})
   s.require_path = 'lib'
+
+  s.add_dependency 'guard', '~> 2.0'
+  s.add_development_dependency 'bundler', ">= 1.4.0.rc.1"
+  s.add_development_dependency 'rake'
+  s.add_development_dependency 'rspec'
 end
